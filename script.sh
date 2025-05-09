@@ -9,6 +9,7 @@ do
     do
       echo "Unziping $zip"
       unzip "$zip" -d /downloads/
+      rm -rf "/downloads/*.zip"
     done
   else
     echo "No zip files found"
