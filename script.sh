@@ -2,10 +2,16 @@
 
 cd /downloads
 while true
-do 
-  for zip in ./*.zip
-  do
-    unzip zip
-  done
+do
+  if [ -e *.zip ]
+  then
+    for zip in /downloads/*.zip
+    do
+      echo "Unziping $zip"
+      unzip $zip -d /downloads/
+    done
+  else
+    echo "No zip files found"
+  fi
   sleep 120
 done
