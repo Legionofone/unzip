@@ -1,4 +1,3 @@
 FROM alpine:3.14
-RUN apt-get update \
-    && apk add --no-cache bash
+RUN apk update && apk add bash
 CMD bash
