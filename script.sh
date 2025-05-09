@@ -8,7 +8,7 @@ do
     for zip in /downloads/*.zip
     do
       echo "Unziping $zip"
-      unzip $zip -d /downloads/
+      unzip "$zip" -d /downloads/
     done
   else
     echo "No zip files found"
